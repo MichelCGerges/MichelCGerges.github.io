@@ -1,1 +1,79 @@
-This is a test
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selfhaunt</title>
+  <meta name="description" content="Selfhaunt is a one-finger arcade game where every run you finish comes back as a ghost.">
+  <meta property="og:title" content="Selfhaunt">
+  <meta property="og:description" content="Every run you finish comes back as a ghost.">
+  <meta property="og:image" content="https://michelcgerges.github.io/selfhaunt-feature-graphic.jpg">
+  <link rel="icon" href="selfhaunt-icon-512.png">
+  <style>
+    :root {
+      --bg-inner: #23234f;
+      --bg-outer: #0d0d24;
+      --text: #ffffff;
+      --text-dim: rgba(255, 255, 255, 0.68);
+      --accent: #3ee6ff;
+      --coin: #ffe98a;
+      --edge: rgba(255, 255, 255, 0.14);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 20%, var(--bg-inner), var(--bg-outer) 70%) fixed;
+      background-color: var(--bg-outer);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 16px 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 760px) {
+      main { grid-template-columns: 1.1fr 0.9fr; padding-top: 80px; }
+    }
+    .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+    h1 { font-size: clamp(2.4rem, 7vw, 3.6rem); letter-spacing: 0.12em; margin: 20px 0 8px; font-weight: 900; }
+    .tagline { font-size: 1.25rem; color: var(--text-dim); margin: 0 0 24px; }
+    p { color: var(--text-dim); margin: 0 0 14px; }
+    .badge {
+      display: inline-block; margin-top: 12px; padding: 10px 18px; border-radius: 999px;
+      border: 1.5px solid var(--accent); color: var(--text); font-weight: 700; letter-spacing: 0.06em;
+      font-size: 0.85rem; background: rgba(62, 230, 255, 0.12);
+    }
+    .shot { width: 100%; height: auto; max-width: 340px; justify-self: center; border-radius: 28px; border: 1px solid var(--edge); box-shadow: 0 18px 50px rgba(0,0,0,.5); }
+    footer {
+      max-width: 960px; margin: 0 auto; padding: 24px 16px 40px; border-top: 1px solid var(--edge);
+      display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--text-dim); font-size: 0.9rem;
+    }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <img class="icon" src="selfhaunt-icon-512.png" alt="Selfhaunt app icon" width="96" height="96">
+      <h1>SELFHAUNT</h1>
+      <p class="tagline">Every run you finish comes back as a ghost.</p>
+      <p>Selfhaunt is a one-finger arcade game about outrunning yourself. Drag anywhere to steer your dot to the coin. The moment you grab it, the path you just took becomes a ghost that replays in every round after. Touch a ghost and the run is over.</p>
+      <p>Every game ends in its own glowing tangle of the paths you ran. There's a daily challenge with the same coins for everyone, and five looks to unlock as you play.</p>
+      <span class="badge">COMING SOON TO GOOGLE PLAY</span>
+    </section>
+    <img class="shot" src="selfhaunt-screenshot-3.jpg" alt="A Selfhaunt game-over screen showing a tangle of ghost paths" width="1080" height="1920">
+  </main>
+  <footer>
+    <span>&copy; 2026 Michel Gerges</span>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:mnaut.dev@gmail.com">Contact</a>
+  </footer>
+</body>
+</html>
